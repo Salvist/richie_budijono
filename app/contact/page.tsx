@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import { site } from "../lib/data";
+
+export const metadata:Metadata={title:"Contact",description:"Start a software project with Richie Budijono."};
+export default function ContactPage(){return <section className="contact-layout container"><div className="contact-main"><p className="eyebrow">Start a conversation</p><h1>Have a product idea or software <em>problem?</em></h1><p>Send me a short note. You don’t need a polished brief—just enough context for us to figure out whether I’m the right person to help.</p><a className="email-link" href={`mailto:${site.email}?subject=Project inquiry`}><span>{site.email}</span><b aria-hidden="true">↗</b></a></div><aside className="brief-card"><h2>A useful first note includes:</h2><p>A few practical details make it easier to give you a useful reply.</p><ol><li>What you want to build or improve</li><li>Who the product is for</li><li>Where the project stands today</li><li>Your ideal timing</li><li>A budget range, if you have one</li></ol></aside></section>}
